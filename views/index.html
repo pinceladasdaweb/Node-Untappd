@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Node.js + Untappd API</title>
+    <meta charset="utf-8">
+    <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+</head>
+    <body>
+
+        <h1>Node.js + Untappd API</h1>
+        <div id="stream">
+            <img class="loading" src="assets/svg/loading-spin.svg" alt="Loading">
+        </div>
+        <img class="powered-by" src="assets/css/img/poweredbyuntappd.png" alt="Powered by Untappd API">
+
+        <script id="untappd-template" type="text/x-handlebars-template">
+            {{#each this}}
+            {{user @index}}
+            <div id="checkin-{{id}}" class="checkin cf">
+                <img class="beer-label" src="{{beerLabel}}" alt="{{beer}}">
+                <div class="beer">
+                    <p>{{beer}}</p>
+                    <span>{{company}}</span>
+                </div>
+                {{#if comments}}
+                <p class="comment"></p>
+                {{/if}}
+                <span class="rating r{{ratingCount rating}}"></span>
+                <footer>
+                    {{#if venueId}}
+                    <p class="location"><a href="https://untappd.com/venue/{{venueId}}" title="{{venueName}}">{{venueName}}</a></p>
+                    {{/if}}
+                    <div class="footer-time">
+                        <time>{{published createdAt}}</time>
+                        <a class="checkin-page hide-text" href="https://untappd.com/user/{{username}}/checkin/{{id}}" title="Checkin Page">Checkin Page</a>
+                    </div>
+                </footer>
+            </div>
+            {{/each}}
+        </script>
+
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js"></script>
+        <script type="text/javascript" src="assets/js/app.min.js"></script>
+        <script type="text/javascript">
+            Untappd.init({
+                template: $('#untappd-template').html(),
+                container: $('#stream'),
+                username: '' // Untappd username
+            });
+        </script>
+    </body>
+</html>
