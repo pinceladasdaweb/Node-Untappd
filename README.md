@@ -43,7 +43,7 @@ Untappd.init({
             {{/if}}
             <div class="footer-time">
                 <time>{{published createdAt}}</time>
-                <a class="checkin-page hide-text" href="https://untappd.com/user/pinceladasdaweb/checkin/{{id}}" title="Checkin Page">Checkin Page</a>
+                <a class="checkin-page hide-text" href="https://untappd.com/user/{{username}}/checkin/{{id}}" title="Checkin Page">Checkin Page</a>
             </div>
         </footer>
     </div>
