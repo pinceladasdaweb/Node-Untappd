@@ -1,6 +1,6 @@
 {
   "name": "node-untappd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Display your latest activity in Untappd",
   "main": "app.js",
   "scripts": {
