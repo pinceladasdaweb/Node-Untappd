@@ -34,7 +34,7 @@ Untappd.init({
             <span>{{company}}</span>
         </div>
         {{#if comments}}
-        <p class="comment"></p>
+        <p class="comment">{{comments}}</p>
         {{/if}}
         <span class="rating r{{ratingCount rating}}"></span>
         <footer>
