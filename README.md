@@ -19,6 +19,8 @@ Untappd.init({
 });
 ```
 
+3 - Run `grunt` to build package and after `npm start` to run the script.
+
 ##Customize Template
 
 1 - To customize the template open the views/index.html file and look for the following block of code:
