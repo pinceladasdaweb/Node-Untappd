@@ -3,6 +3,7 @@
 var express  = require('express'),
     request  = require('request'),
     compress = require('compression'),
+    config   = require('./config.js'),
     route    = express.Router(),
     app      = express(),
     port     = process.env.PORT || 9001,
@@ -27,8 +28,8 @@ route.get('/checkins', function (req, res) {
         json: true,
         timeout: 10000,
         qs: {
-            client_id: '', // Your Client ID here
-            client_secret: '' // Your Client Secret here
+            client_id: config.untappd.client_id,
+            client_secret: config.untappd.client_secret
         }
     }, function (error, response, body) {
         res.send(body);
