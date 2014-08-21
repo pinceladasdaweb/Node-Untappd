@@ -7,7 +7,7 @@ Display your latest activity in Untappd with Node.js and jQuery.
 
 ##Usage
 
-1 - The Untappd API require you register an application. Register your [here](https://untappd.com/api/register?register=new). Fill in the app.js file with your Client ID and Client Secret.
+1 - The Untappd API require you register an application. Register your [here](https://untappd.com/api/register?register=new). Fill in the config.js file with your Client ID and Client Secret.
 
 2 - From within a script tag or a JS file:
 
