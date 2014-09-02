@@ -7,23 +7,25 @@ Display your latest activity in Untappd with Node.js and jQuery.
 
 ##Usage
 
-1 - The Untappd API require you register an application. Register your [here](https://untappd.com/api/register?register=new). Fill in the config.js file with your Client ID and Client Secret.
+1 - The Untappd API require you register an application. Register your [here](https://untappd.com/api/register?register=new). Fill in the [`config.js`](config.js) file with your Client ID and Client Secret.
 
-2 - From within a script tag or a JS file:
+2 - In your terminal, run the command `npm install` to install the dependencies of the project.
+
+3 - Open the [`index.html`](views/index.html) file and fill in the variable username with your username of Untappd:
 
 ```javascript
 Untappd.init({
     template: $('#untappd-template').html(),  // The ID of your template
     container: $('#stream'),                  // domNode to attach to
-    username: 'pinceladasdaweb'               // Untappd username
+    username: ''                              // Untappd username
 });
 ```
 
-3 - Run `grunt` to build package and after `npm start` to run the script.
+4 - Run the command `npm start` to start server.
 
 ##Customize Template
 
-1 - To customize the template open the views/index.html file and look for the following block of code:
+1 - To customize the template open the [`index.html`](views/index.html) file and look for the following block of code:
 
 ```javascript
 <script id="untappd-template" type="text/x-handlebars-template">
