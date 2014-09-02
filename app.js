@@ -19,7 +19,7 @@ app.use(compress({
 app.use(express.static(pub + '/public', {maxAge: 86400000}));
 
 route.get('/', function (req, res) {
-    res.sendfile("views/index.html");
+    res.sendFile(pub + "/views/index.html");
 });
 
 route.get('/checkins', function (req, res) {
