@@ -1,6 +1,6 @@
 {
   "name": "node-untappd",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Display your latest activity in Untappd",
   "main": "app.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "Pedro Rogerio",
   "license": "MIT",
   "devDependencies": {
-    "express": "~4.9.3",
+    "express": "~4.9.4",
     "request": "~2.44.0",
     "compression": "~1.1.0",
     "grunt": "~0.4.5",
