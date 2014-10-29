@@ -23,7 +23,21 @@ Untappd.init({
 
 4 - Run the command `npm start` to start server.
 
-##Customize Template
+##AMD Support
+
+You can also load the script via AMD:
+
+```javascript
+require(["/path/to/app.min"], function(Untappd) {
+    Untappd.init({
+        template: $('#untappd-template').html(),
+        container: $('#stream'),
+        username: '' // Untappd username
+    });
+});
+```
+
+##Customize Handlebars Template
 
 1 - To customize the template open the [`index.html`](views/index.html) file and look for the following block of code:
 
