@@ -24,7 +24,7 @@ route.get('/', function (req, res) {
 
 route.get('/checkins', function (req, res) {
     request({
-        url: 'http://api.untappd.com/v4/user/checkins/' + req.query.user,
+        url: 'https://api.untappd.com/v4/user/checkins/' + req.query.user,
         json: true,
         timeout: 10000,
         qs: {
