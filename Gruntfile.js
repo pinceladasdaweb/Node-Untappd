@@ -14,15 +14,12 @@ module.exports = function (grunt) {
             }
         },
         cssmin: {
-            with_banner: {
-                options: {
-                    banner: '/* Minified CSS of <%= pkg.name %> version:<%= pkg.version %> */'
-                },
+            target: {
                 files: {
                     'public/assets/css/style.min.css': ['public/assets/css/style.css']
                 }
             }
-        }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
