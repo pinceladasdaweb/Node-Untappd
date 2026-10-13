@@ -18,7 +18,7 @@
   "author": "Pedro Rogerio",
   "license": "MIT",
   "dependencies": {
-    "compression": "^1.8.1",
+    "compression": "^1.8.2",
     "express": "^5.2.0",
     "request": "~2.88.2"
   },
